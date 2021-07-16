@@ -1,29 +1,107 @@
-< template >
-  < div  class = " bayangan kartu mt-3 " >
-    < div  class = " badan kartu " >
-      < h5  class = " card-title " >Edit teman</ h5 >
-      < form  class = " baris g-3 " @ kirim . cegah = " perbarui " >
-        < div  class = " col-md-6 " >
-          < label  for = " inputEmail4 "  class = " form-label " >Nama</ label >
-          < masukan
-            ketik = " teks "
-            class = " kontrol bentuk "
-            id = " inputEmail4 "
-            v-model = " teman . nama "
+<template>
+  <div class="card shadow mt-3">
+    <div class="card-body">
+      <h5 class="card-title">Edit friend</h5>
+      <form class="row g-3" @submit.prevent="update">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Nama</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputEmail4"
+            v-model="friend.nama"
           />
-          < div  class = " alert alert-danger "  v-if = " validasi . nama " >
-            {{ validasi . nama [ 0 ] }}
-          </ div >
-        </ div >
-        < div  class = " col-md-6 " >
-          < label  for = " inputPassword4 "  class = " form-label " >Tanpa Tlp</ label >
-          < masukan
-            jenis = " nomor "
-            class = " kontrol bentuk "
-            id = " inputPassword4 "
-            v-model = " teman . no_tlp "
+          <div class="alert alert-danger" v-if="validation.nama">
+            {{ validation.nama[0] }}
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">No Tlp</label>
+          <input
+            type="number"
+            class="form-control"
+            id="inputPassword4"
+            v-model="friend.no_tlp"
           />
-          < div  class = " alert alert-danger "  v-if = " validasi . no_tlp " >
+           <div class="alert alert-danger" v-if="validation.no_tlp">
+<template>
+  <div class="card shadow mt-3">
+    <div class="card-body">
+      <h5 class="card-title">Edit friend</h5>
+      <form class="row g-3" @submit.prevent="update">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Nama</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputEmail4"
+            v-model="friend.nama"
+          />
+          <div class="alert alert-danger" v-if="validation.nama">
+            {{ validation.nama[0] }}
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">No Tlp</label>
+          <input
+            type="number"
+            class="form-control"
+            id="inputPassword4"
+            v-model="friend.no_tlp"
+          />
+           <div class="alert alert-danger" v-if="validation.no_tlp">
+<template>
+  <div class="card shadow mt-3">
+    <div class="card-body">
+      <h5 class="card-title">Edit friend</h5>
+      <form class="row g-3" @submit.prevent="update">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Nama</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputEmail4"
+            v-model="friend.nama"
+          />
+          <div class="alert alert-danger" v-if="validation.nama">
+            {{ validation.nama[0] }}
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">No Tlp</label>
+          <input
+            type="number"
+            class="form-control"
+            id="inputPassword4"
+            v-model="friend.no_tlp"
+          />
+           <div class="alert alert-danger" v-if="validation.no_tlp">
+<template>
+  <div class="card shadow mt-3">
+    <div class="card-body">
+      <h5 class="card-title">Edit friend</h5>
+      <form class="row g-3" @submit.prevent="update">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Nama</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputEmail4"
+            v-model="friend.nama"
+          />
+          <div class="alert alert-danger" v-if="validation.nama">
+            {{ validation.nama[0] }}
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">No Tlp</label>
+          <input
+            type="number"
+            class="form-control"
+            id="inputPassword4"
+            v-model="friend.no_tlp"
+          />
+           <div class="alert alert-danger" v-if="validation.no_tlp">
             {{ validasi . no_tlp [ 0 ] }}
           </ div >
         </ div >
@@ -39,29 +117,43 @@
 
         
     
-    @@ -40,6 +40,18 @@
+    @@ -40,7 +40,14 @@
   
-            class = " kontrol bentuk "
-            id = " inputAddress "
-            placeholder = " Masukan alamat "
-            v-model = " teman . alamat "
+            class="form-control"
+            id="inputAddress"
+            placeholder="masukan alamat"
+            v-model="friend.alamat"
           />
-          < div  class = " alert alert-danger "  v-if = " validasi . alamat " >
+           <div class="alert alert-danger" v-if="validation.alamat">
+            class="form-control"
+            id="inputAddress"
+            placeholder="masukan alamat"
+            v-model="friend.alamat"
+          />
+           <div class="alert alert-danger" v-if="validation.alamat">
+            class="form-control"
+            id="inputAddress"
+            placeholder="masukan alamat"
+            v-model="friend.alamat"
+          />
+           <div class="alert alert-danger" v-if="validation.alamat">
+            class="form-control"
+            id="inputAddress"
+            placeholder="masukan alamat"
+            v-model="friend.alamat"
+          />
+           <div class="alert alert-danger" v-if="validation.alamat">
             {{ validasi . alamat [ 0 ] }}
           </ div >
         </ div >
-        < div  class = " col-6 " >
-          < label  for = " inputAddress "  class = " form-label " >Grup</ label >
-          < pilih
-            kelas = " bentuk-pilih "
-            aria-label = " Contoh pilih default "
-            v-model = " teman . groups_id "
-          >
-            < option  v-for = " group in groups " : key = " group . id " : value = " group . id " >
-              {{ kelompok . nama }}
-            </ pilihan >
-          </ pilih >
-        </ div >
+< div  class = " col-6 " >
+    < label  for = " inputAddress "  class = " form-label " >Grup</ label >
+< pilih  kelas = " form-select "  aria-label = " Contoh pilih default "  v-model = " teman . groups_id " >
+
+  < option  v-for = " group in groups " : key = " group . id " : value = " group . id " >{{ group . nama }}</ opsi >
+
+</ pilih >
+</ div >
         < div  class = " col-12 " >
           < jenis tombol  = " kirim " class = " btn btn-primary " >Edit</ tombol > 
         </ div >
@@ -73,74 +165,142 @@
 
         
     
-    @@ -48,62 +60,80 @@
+    @@ -59,36 +66,53 @@ ekspor default {
   
-      </ bentuk >
-    </ div >
-  </ div >
-</ template >
-< naskah >
-import { onMounted , reaktif , ref } dari " vue " ;  
-import { useRoute , useRouter } dari  " vue-router " ;
-impor  aksio  dari  " aksios " ;
-ekspor  default {
-  pengaturan () {
-    const  teman  =  reaktif ({
+      </form>
+    </div>
+  </div>
+</template>
+<script>
+import { onMounted, reactive, ref } from "vue";
+import { useRouter } from "vue-router";
+import axios from "axios";
+export default {
+  setup() {
+    const friend = reactive({
+      </form>
+    </div>
+  </div>
+</template>
+<script>
+import { onMounted, reactive, ref } from "vue";
+import { useRouter } from "vue-router";
+import axios from "axios";
+export default {
+  setup() {
+    const friend = reactive({
+      </form>
+    </div>
+  </div>
+</template>
+<script>
+import { onMounted, reactive, ref } from "vue";
+import { useRouter } from "vue-router";
+import axios from "axios";
+export default {
+  setup() {
+    const friend = reactive({
+      </form>
+    </div>
+  </div>
+</template>
+<script>
+import { onMounted, reactive, ref } from "vue";
+import { useRouter } from "vue-router";
+import axios from "axios";
+export default {
+  setup() {
+    const friend = reactive({
       nama :  " " ,
       no_tlp :  " " ,
       alamat :  " " ,
-      group_id :  " "
+      group_id :  " " ,
     });
-    biarkan grup =  ref ([]);
+biarkan grup =  ref ([]);
      validasi  const =  ref ([]);
     const  router  =  useRouter ();
-    const  rute  =  useRoute () ;
+    const  rute  =  useRouter ()
     terpasang (() => {
-      aksio
-        . dapatkan ( ` http://127.0.0.1:8000/api/friends/ ${ route . params . id } /edit ` )
+      aksio . dapatkan ( '  http:// 127.0.0.1:8000 /api/friends/${route.params.id} /edit ' )
+      . lalu ( respon  => {
+        konsol . log ( respon . data . data . nama )
+        teman . nama  =  tanggapan . data . data . nama
+         teman . no_tlp  =  tanggapan . data . data . no_tlp
+          teman . alamat  =  tanggapan . data . data . alamat
+           teman . groups_id  =  tanggapan . data . data . grup_id
+      }). tangkap ( kesalahan  => {
+        konsol . log ( kesalahan . respon . data )
+      });
+ aksio
+        . dapatkan ( " http://127.0.0.1:8000/api/groups/ " )
         . lalu (( respon ) => {
-          konsol . log ( respon . data . data . nama );
-          teman . nama  =  tanggapan . data . data . nama ;
-          teman . no_tlp  =  tanggapan . data . data . no_tlp ;
-          teman . alamat  =  tanggapan . data . data . alamat ;
-          teman . groups_id  =  tanggapan . data . data . grup_id ;
-        })
-        . tangkap (( kesalahan ) => {
-          konsol . log ( error . respon . data );
-        });
-         aksio
-        . dapatkan ( " http://127.0.0.1:8000/api/groups " )
-        . lalu (( respon ) => {
-          kelompok . nilai  =  respon . data . data ;
+         kelompok . nilai  =  respon . data ;
           konsol . log (tanggapan);
         })
         . tangkap (( kesalahan ) => {
+          
           konsol . log (kesalahan);
         });
-    });
+});
      pembaruan fungsi () {
       biarkan nama =  teman . nama ;
       biarkan no_tlp =  teman . no_tlp ;
       biar alamat =  teman . alamat ;
-      biarkan groups_id =  teman . grup_id ;
-      aksio
-        . put ( ` http://127.0.0.1:8000/api/friends/ ${ route . params . id } ` , {
+       biarkan groups_id =  teman . grup_id ;
+      aksio . put ( ' http:// 127.0.0.1:8000 /api/friends/${route.params.id} ' , {
           nama : nama,
           no_tlp : no_tlp,
           alamat : alamat,
-          grup_id : grup_id,
+           grup_id : grup_id,
         })
         . lalu (() => {
           router . dorong ({
-            nama :  " Rumah " ,
+
+    
+        
+          
+    
+
+        
+    
+    @@ -104,7 +128,8 @@ ekspor default {
+  
+            name: "Home",
           });
         })
-        . tangkap (( kesalahan ) => {
-          validasi . nilai  =  kesalahan . respon . data ;
+        .catch((error) => {
+         validation.value = error.response.data
         });
     }
-    kembali {
-      teman,
+    return {
+      friend,
+            name: "Home",
+          });
+        })
+        .catch((error) => {
+         validation.value = error.response.data
+        });
+    }
+    return {
+      friend,
+            name: "Home",
+          });
+        })
+        .catch((error) => {
+         validation.value = error.response.data
+        });
+    }
+    return {
+      friend,
+            name: "Home",
+          });
+        })
+        .catch((error) => {
+         validation.value = error.response.data
+        });
+    }
+    return {
+      friend,
       validasi,
       router,
       memperbarui,
@@ -159,4 +319,7 @@ ekspor  default {
     
     
   
-</ skrip >
+</script>
+</script>
+</script>
+</script>
